@@ -10,3 +10,12 @@ export function getAccessToken() {
         return null;
     }
 }
+
+export function clearUserData() {
+    localStorage.removeItem('user');
+}
+
+export function setUserData() {
+    localStorage.setItem('user', JSON.stringify(data));
+}
+
