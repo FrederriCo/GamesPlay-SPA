@@ -14,3 +14,15 @@ export async function login(email, password) {
 
     return result;
 }
+
+export async function register(email, password) {
+    const result = await api.post(endPoints.register, { email, password });
+    setUserData(result);
+
+    return result;
+}
+
+export async function logout(){
+    api.get(endPoints.logout);
+    clearUserData();
+}
