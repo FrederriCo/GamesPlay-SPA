@@ -1,0 +1,5 @@
+import page from '../node_modules/page/page.mjs';
+
+page('/', () => console.log('home page'));
+
+page.start();
