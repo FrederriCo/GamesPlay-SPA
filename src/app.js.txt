@@ -1,5 +1,11 @@
 import page from '../node_modules/page/page.mjs';
 
 page('/', () => console.log('home page'));
+page('/catalog', () => console.log('catalog'));
+page('/login', () => console.log('login'));
+page('/register', () => console.log('register'));
+page('/create', () => console.log('create'));
+page('/details/:id', () => console.log('details'));
+page('/edit/:id', () => console.log(logout'));
 
 page.start();
