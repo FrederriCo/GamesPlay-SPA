@@ -2,6 +2,8 @@ import page from '../node_modules/page/page.mjs';
 
 import { homeView } from './views/home.js';
 
+page(addRender);
+
 page('/', homeView);
 page('/catalog', () => console.log('catalog'));
 page('/login', () => console.log('login'));
