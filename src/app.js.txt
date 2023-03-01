@@ -1,6 +1,8 @@
 import page from '../node_modules/page/page.mjs';
 
-page('/', () => console.log('home page'));
+import { homeView } from './views/home.js';
+
+page('/', homeView);
 page('/catalog', () => console.log('catalog'));
 page('/login', () => console.log('login'));
 page('/register', () => console.log('register'));
