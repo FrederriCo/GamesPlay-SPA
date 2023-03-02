@@ -9,7 +9,7 @@ page(addRender);
 
 page('/', homeView);
 page('/register', regiterView);
-page('/login', () => console.log('login'));
+page('/login', loginView);
 page('/catalog', () => console.log('catalog'));
 page('/create', () => console.log('create'));
 page('/details/:id', () => console.log('details'));
