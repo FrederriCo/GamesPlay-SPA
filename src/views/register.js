@@ -32,7 +32,12 @@ export function regiterView(ctx) {
 }
 
 async function onSubmit(ctx, data, event) {
-   
+    if(data.email == '' || data.password == '') {
+        return alert('All fields are required!');
+    }
+    if(data.password != data['confirm-password']) {
+        return alert('Passwords don\`t match!');
+    }
     await userService.register(data.email, data.password);
     event.target.reset();  
     ctx.page.redirect('/');
