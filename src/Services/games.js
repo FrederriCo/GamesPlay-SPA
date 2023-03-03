@@ -9,3 +9,7 @@ const endPoints = {
 export async function getRecent() {
     return api.get(endPoints.recent);
 };
+
+export async function getAllGames() {
+    return api.get(endPoints.games);
+};
