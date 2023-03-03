@@ -1,7 +1,8 @@
 import * as api from '../api/api.js';
 
 const endPoints = {
-    recent: '/data/games?sortBy=_createdOn%20desc&distinct=category'   
+    recent: '/data/games?sortBy=_createdOn%20desc&distinct=category',
+	games: '/data/games?sortBy=_createdOn%20desc'	
 
 };
 
