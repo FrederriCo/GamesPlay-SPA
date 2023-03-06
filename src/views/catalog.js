@@ -1,4 +1,5 @@
 import { html } from '../../node_modules/lit-html/lit-html.js'
+import * as gameService from '../Services/games.js'
 
 const catalogTemplate = (games) => html`
 <section id="catalog-page">
@@ -26,3 +27,9 @@ const cardTemplate = (game) => html`
     </div>
 
 </div>`;
+
+export async function catalogView(ctx) {
+    const games = await gameService.getAllGames();
+
+    ctx.render(catalogTemplate(games));
+}
