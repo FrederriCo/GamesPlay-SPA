@@ -2,7 +2,8 @@ import * as api from '../api/api.js';
 
 const endPoints = {
     recent: '/data/games?sortBy=_createdOn%20desc&distinct=category',
-	games: '/data/games?sortBy=_createdOn%20desc'	
+	games: '/data/games?sortBy=_createdOn%20desc',
+	create: '/data/games',
 
 };
 
@@ -13,3 +14,7 @@ export async function getRecent() {
 export async function getAllGames() {
     return api.get(endPoints.games);
 };
+
+export async function create(data) {
+    return api.post(endPoints.create, data);
+}
