@@ -5,6 +5,7 @@ const endPoints = {
 	games: '/data/games?sortBy=_createdOn%20desc',
 	create: '/data/games',
 	byId: '/data/games/',
+	deleteById: '/data/games/',
 
 };
 
@@ -22,4 +23,8 @@ export async function create(data) {
 
 export async function getById(id) {
     return api.get(endPoints.byId + id);
+}
+
+export async function deleteById(id) {
+    return api.del(endPoints.deleteById + id);
 }
