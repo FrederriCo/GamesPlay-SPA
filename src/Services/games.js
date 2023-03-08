@@ -6,6 +6,7 @@ const endPoints = {
 	create: '/data/games',
 	byId: '/data/games/',
 	deleteById: '/data/games/',
+	update: '/data/games/',
 
 };
 
@@ -27,4 +28,8 @@ export async function getById(id) {
 
 export async function deleteById(id) {
     return api.del(endPoints.deleteById + id);
+}
+
+export async function update(id, data) {
+    return api.put(endPoints.update + id, data);
 }
