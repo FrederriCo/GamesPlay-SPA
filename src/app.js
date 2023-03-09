@@ -14,8 +14,10 @@ page('/', homeView);
 page('/register', regiterView);
 page('/login', loginView);
 page('/catalog', catalogView);
+page('/logout', onLogout);
 page('/create', () => console.log('create'));
 page('/details/:id', () => console.log('details'));
-page('/edit/:id', () => console.log(logout'));
+page('/edit/:id', () => console.log('edit'));
+
 
 page.start();
