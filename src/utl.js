@@ -1,3 +1,5 @@
+import { logout } from './Services/user.js';
+
 export function getUserData() {
     return JSON.parse(localStorage.getItem('user'));
 }
@@ -28,3 +30,8 @@ export function createSubmitHandler(ctx, handler) {
     };
 
 }
+
+export function onLogout(ctx) {
+    logout();
+    ctx.page.redirect('/');
+  }
