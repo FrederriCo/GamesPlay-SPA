@@ -45,5 +45,6 @@ async function onSubmit(ctx, data, event) {
 
     });
 
-    event.target.reset();    
+    event.target.reset();
+    ctx.page.redirect('/');
 }
