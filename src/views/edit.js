@@ -32,5 +32,25 @@ export async function editView(ctx) {
     const gameId = ctx.params.id;
     const game = await gameServices.getById(gameId);
 
-    ctx.render(editTempalte());
+    ctx.render(editTempalte(game, createSubmitHandler(ctx, onSubmit)));
+}
+
+async function onSubmit(ctx, data, event) {
+    const gameId = ctx.params.id;
+
+    if (Object.values(data).some(d => d == '')) {
+        return alert('All fields are required!');
+    }
+
+    await gameServices.update(gameId, {
+        title: data.title,
+        category: data.category,
+        maxLevel: data.maxLevel,
+        imageUrl: data.imageUrl,
+        summary: data.summary
+
+    });
+
+   
+    ctx.page.redirect('/details/' + gameId);
 }
