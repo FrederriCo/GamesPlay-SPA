@@ -7,6 +7,7 @@ import { regiterView } from './views/register.js';
 import { loginView } from './views/login.js';
 import { catalogView } from './views/catalog.js';
 import { createView } from './views/create.js';
+import { editView } from './views/edit.js';
 
 page(addSession);
 page(addRender);
@@ -18,7 +19,7 @@ page('/catalog', catalogView);
 page('/logout', onLogout); 
 page('/create', createView);
 page('/details/:id', () => console.log('details'));
-page('/edit/:id', () => console.log('edit'));
+page('/edit/:id', editView);
 
 
 page.start();
