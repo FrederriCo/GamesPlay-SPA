@@ -18,8 +18,9 @@ page('/login', loginView);
 page('/catalog', catalogView);
 page('/logout', onLogout); 
 page('/create', createView);
-page('/details/:id', () => console.log('details'));
 page('/edit/:id', editView);
+page('/details/:id', () => console.log('details'));
+
 
 
 page.start();
