@@ -58,7 +58,7 @@ export async function detailsView(ctx) {
 
       if(choice) {
         await gameServices.deleteById(gameId);
-        
+        ctx.page.redirect('/');
       }
 
     }
