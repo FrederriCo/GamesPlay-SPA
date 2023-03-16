@@ -9,6 +9,7 @@ import { catalogView } from './views/catalog.js';
 import { createView } from './views/create.js';
 import { editView } from './views/edit.js';
 import { detailsView } from './views/details.js';
+import { onLogout } from '../src/util.js';
 
 page(addSession);
 page(addRender);
@@ -21,7 +22,7 @@ page('/logout', onLogout);
 page('/create', createView);
 page('/edit/:id', editView);
 page('/details/:id', detailsView);
-
+page('/logout', onLogout);
 
 
 page.start();
